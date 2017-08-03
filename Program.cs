@@ -1,9 +1,5 @@
-﻿using System;
-using System.IO.Packaging;
-using System.Windows;
-using DocumentFormat.OpenXml.Packaging;
-using System.IO;
-using System.Reflection;
+﻿using DocumentFormat.OpenXml.Packaging;
+using System;
 
 namespace TestOpenXML
 {
@@ -11,15 +7,10 @@ namespace TestOpenXML
     {
         public static void Main(string[] args)
         {
-
-            string fileName = @"../../task.xlsx";
-            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(fileName, true))
+            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open("task.xlsx", true))
 			{
-				Console.WriteLine();
-				Console.ReadKey();
+                Console.WriteLine("Success!");
 			}
-
-
         }
     }
 }
